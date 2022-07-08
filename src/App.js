@@ -9,6 +9,10 @@ function App() {
       setCount (count - 1) 
     }
   };
+
+  const handlePlusClick = () => {
+    ()=> setCount (count + 1) 
+  };
   
   return (
     <>
@@ -16,7 +20,7 @@ function App() {
      <button className="minus" onClick={handleMinusClick}>
       -
      </button>
-     <button className="plus" onClick={()=> setCount (count + 1) }>+</button>
+     <button className="plus" onClick={handlePlusClick}>+</button>
     </>
   );
 }
